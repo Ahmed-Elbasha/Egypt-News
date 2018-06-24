@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:id="@+id/list_item">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"
+        android:id="@+id/news_article_image"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_alignParentBottom="true"
+        android:background="#69424242"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="هنا عنوان الخبر."
+            android:textAlignment="textStart"
+            android:gravity="start"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:id="@+id/news_article_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="هنا مصدر الخبر."
+            android:textAlignment="textStart"
+            android:gravity="start"
+            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:id="@+id/news_article_source"
+            android:layout_below="@id/news_article_title"
+            android:paddingTop="35dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="هنا تاريخ الخبر."
+            android:textAlignment="textStart"
+            android:gravity="start"
+            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:id="@+id/news_article_publish_date"
+            android:layout_below="@id/news_article_source"
+            android:paddingTop="60dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
