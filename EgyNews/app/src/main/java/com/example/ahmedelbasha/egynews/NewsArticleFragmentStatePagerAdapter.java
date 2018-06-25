@@ -20,15 +20,15 @@ public class NewsArticleFragmentStatePagerAdapter extends FragmentStatePagerAdap
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return  new BusinessFragment();
+            return  new BusinessNewsFragmentActivity.BusinessFragment();
         } else if (position == 1) {
-            return new EntertainmentFragment();
+            return new EntertainmentNewsFragmentActivity.EntertainmentFragment();
         } else if (position == 2) {
-            return new PoliticsFragment();
+            return new PoliticsNewsFragmentActivity.PoliticsFragment();
         } else if (position == 3) {
-            return  new SportsFragment();
+            return  new SportsNewsFragmentActivity.SportsFragment();
         } else {
-            return  new TechnologyFragment();
+            return  new TechnologyNewsFragmentActivity.TechnologyFragment();
         }
     }
 
