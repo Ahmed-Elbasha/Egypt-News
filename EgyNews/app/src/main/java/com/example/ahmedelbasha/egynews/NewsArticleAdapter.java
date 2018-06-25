@@ -7,7 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -30,6 +33,25 @@ public class NewsArticleAdapter extends ArrayAdapter<NewsArticle>{
 
         TextView newsArticleTitleTextView = listItem.findViewById(R.id.news_article_title);
         newsArticleTitleTextView.setText(currentNewsArticle.getArticleTitle());
+
+        TextView newsArticleSourceTextView = listItem.findViewById(R.id.news_article_source);
+        newsArticleSourceTextView.setText(currentNewsArticle.getArticleSourceName());
+
+        TextView newsArticlePublishDateTextView = listItem.findViewById(R.id.news_article_publish_date);
+        newsArticlePublishDateTextView.setText(currentNewsArticle.getPublishDate());
+
+        ImageView newsImageImageView = listItem.findViewById(R.id.news_article_image);
+
+        String newsImageUrl = currentNewsArticle.getArticleImageUrl();
+
+        Picasso.with(getContext()).
+                load(newsImageUrl).
+                centerCrop().
+                fit().
+                error(R.drawable.no_image).
+                placeholder(R.drawable.no_image).
+                into(newsImageImageView);
+
 
         return listItem;
     }
